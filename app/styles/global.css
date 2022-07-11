@@ -1,0 +1,102 @@
+/* ------- VAR */
+:root {
+  /* sizes */
+  --ws-w: max(90vw, 1920px);
+}
+
+/* ------- Utils */
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* ------- PAGE */
+
+/* .Nav > * {
+  flex-grow: 1;
+} */
+
+/* ------- WebGl */
+.Canvas {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.SocialIcon > svg {
+  width: 2em;
+  height: 2em;
+  display: inline;
+  margin-right: 1em;
+}
+
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.overflow-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.overflow-y-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* ------- Animation */
+.an-scroller > div {
+  animation: scroller 150s linear infinite;
+}
+
+@keyframes scroller {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.an-flash {
+  animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* test */
+
+.style-list > li {
+  list-style: disc outside none;
+  display: list-item;
+  margin-left: 2em;
+  padding-left: 0;
+}
